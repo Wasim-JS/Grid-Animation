@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main{
+    width: 100%;
+   height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(16,70px);
+    background-color: black;
+    gap: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+main span{
+    background-color: rgb(37, 35, 35);
+    display: inline-block;
+    height: 70px;
+    position: relative;
+    z-index: 10;
+
+}
+
+main .cursor{
+
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    background-color: red;
+    filter: blur(80px);
+    border-radius: 50%;
+    transform: translate(-50%,-50%);
+    transition: .1s linear;
+ 
+     
+
+}
+
+main span::before{
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background-color: black;
+    top: 0;
+    left: 0;
+}
